@@ -87,14 +87,16 @@ const LandingPage = () => {
     nvCss2.rel = "stylesheet";
     nvCss2.href = `${assetUrl}/css/nivo-lightbox/default.css`;
     document.head.appendChild(nvCss2);
-
+    
     return () => {
       document.head.removeChild(landingCss);
       document.head.removeChild(bsCss);
       document.head.removeChild(nvCss);
       document.head.removeChild(nvCss2);
+    
+
     };
-  }, []);
+  }, [apiUrl, assetUrl]);
 
   return (
     <div>
